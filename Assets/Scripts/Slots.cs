@@ -20,8 +20,11 @@ public class Slots : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        if (!item)
+        //Lands on Person 
+        if (!item && DragHandler.itemBeingDragged.name == this.gameObject.name || !item && this.gameObject.name == "Slots")
         {
+            Debug.Log(DragHandler.itemBeingDragged.name);
+            Debug.Log(this.gameObject.name);
             DragHandler.itemBeingDragged.transform.SetParent(transform);
         }
     }

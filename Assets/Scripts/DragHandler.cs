@@ -27,6 +27,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         itemBeingDragged = null;
         GetComponent<CanvasGroup>().blocksRaycasts = true;
+        //If missplaced
         if (transform.parent == startParent)
         {
             transform.position = startPosition;
