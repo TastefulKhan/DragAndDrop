@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 
 public class Slots : MonoBehaviour, IDropHandler
 {
+
     public GameObject item
     {
 
@@ -17,10 +18,14 @@ public class Slots : MonoBehaviour, IDropHandler
             return null;
         }
     }
-
     public void OnDrop(PointerEventData eventData)
     {
         //Lands on Person 
+        CheckSlot();
+    }
+
+    private void CheckSlot()
+    {
         if (!item && DragHandler.itemBeingDragged.name == this.gameObject.name || !item && this.gameObject.name == "Slots")
         {
             Debug.Log(DragHandler.itemBeingDragged.name);
