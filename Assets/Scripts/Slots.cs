@@ -26,10 +26,11 @@ public class Slots : MonoBehaviour, IDropHandler
 
     private void CheckSlot()
     {
+        //Checks if slots are avalible and names the content
         if (!item && DragHandler.itemBeingDragged.name == this.gameObject.name || !item && this.gameObject.name == "Slots")
         {
-            Debug.Log(DragHandler.itemBeingDragged.name);
-            Debug.Log(this.gameObject.name);
+            //Debug.Log(DragHandler.itemBeingDragged.name);
+            //Debug.Log(this.gameObject.name);
             DragHandler.itemBeingDragged.transform.SetParent(transform);
         }
     }

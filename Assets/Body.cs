@@ -12,6 +12,8 @@ public class Body : MonoBehaviour
     private Transform legs;
     private Transform feet;
 
+
+
     void Update()
     {
         CheckBody();
@@ -24,7 +26,7 @@ public class Body : MonoBehaviour
         torso = this.gameObject.transform.GetChild(1);
         legs = this.gameObject.transform.GetChild(2);
         feet = this.gameObject.transform.GetChild(3);
-        Debug.Log(torso);
+        //Debug.Log(torso);
 
     }
 
