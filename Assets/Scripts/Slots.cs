@@ -5,7 +5,12 @@ using UnityEngine.EventSystems;
 
 public class Slots : MonoBehaviour, IDropHandler
 {
+    private Clothing clothing;
 
+    void Awake()
+    {
+        clothing = GetComponent<Clothing>();
+    }
     public GameObject item
     {
 
@@ -27,10 +32,13 @@ public class Slots : MonoBehaviour, IDropHandler
     private void CheckSlot()
     {
         //Checks if slots are avalible and names the content
-        if (!item && DragHandler.itemBeingDragged.name == this.gameObject.name || !item && this.gameObject.name == "Slots")
+        if (DragHandler.itemBeingDragged.name.StartsWith(this.gameObject.name) && DragHandler.itemBeingDragged.tag == "Under" //correct slot & underpants
+            || this.gameObject.name == "Slots" && !item //inventory slot
+            || DragHandler.itemBeingDragged.name.StartsWith(this.gameObject.name) && item //underpants on & correct slot
+            || DragHandler.itemBeingDragged.name.StartsWith(this.gameObject.name) && DragHandler.itemBeingDragged.tag == "Solo")//no underpants required
         {
             //Debug.Log(DragHandler.itemBeingDragged.name);
-            //Debug.Log(this.gameObject.name);
+            Debug.Log(this.gameObject.name);
             DragHandler.itemBeingDragged.transform.SetParent(transform);
         }
     }

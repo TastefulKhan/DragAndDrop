@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2896498399540586327}
   m_Layer: 5
   m_Name: Torso
-  m_TagString: Untagged
+  m_TagString: Solo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

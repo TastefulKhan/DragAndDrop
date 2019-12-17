@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class Clothing : MonoBehaviour
 {
+    public class Equip
+    {
+        public string Name;
+        public bool Underpants = false;
+        public Equip(string name)
+        {
+            Name = name;
+        }
+    }
     private void Start()
     {
         //Assigning Clothing Objects Attributes and Methods
@@ -16,14 +25,6 @@ public class Clothing : MonoBehaviour
             }
     }
 
-    public class Equip
-    {
-        public string Name { get; set; }
-        public bool Underpants = false;
-        public Equip(string name)
-        {
-            Name = name;
-        }
-    }
+
 
 }

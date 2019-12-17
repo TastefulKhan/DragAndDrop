@@ -32,9 +32,10 @@ public class Body : MonoBehaviour
 
     private bool CheckBody()
     {
-        if (head.childCount > 0 && torso.childCount > 0 && legs.childCount > 0 && feet.childCount > 0)
+        if (head.childCount > 0 && torso.childCount > 0 && legs.childCount > 1 && feet.childCount > 1)
         {
             Debug.Log("Checked!");
+
             return true;
         }
         else {
