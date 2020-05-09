@@ -15,6 +15,8 @@ public class Clothing : MonoBehaviour
     }
     private void Start()
     {
+        // HAVE A FUCKING CHANGE
+
         //Assigning Clothing Objects Attributes and Methods
         Equip equip = new Equip(this.gameObject.name);
         //Debug.Log(equip.Name);
